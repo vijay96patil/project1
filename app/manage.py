@@ -20,3 +20,41 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+def sample_middleware(get_response):
+    def middleware(request):
+        print("[info] before request ")
+        response = get_response(request)
+        print("[info] after request")
+        return response
+    return middleware
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
